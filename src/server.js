@@ -17,10 +17,16 @@ connectDB();
 configurePassport();
 
 // CORS configuration
+/* const cors = require("cors");
+
+app.use(cors({
+  origin: "*"
+}));*/
+
 const corsOptions = {
   origin: function (origin, callback) {
     const allowedOrigins = [
-      'https://job-portal-frontend-chi-five.vercel.app',
+      '**',
       process.env.FRONTEND_URL,
       'http://localhost:5173',
       'http://localhost:3000'
